@@ -15,4 +15,4 @@ const areaCirculo = (raio, pi=3.14) => pi*raio**2
 
 const areaCirculo = (funcao, raio, pi=3.14) => funcao(raio, pi)
 const resultado = areaCirculo((raio, pi) => pi*raio*raio, 10)
-
+console.log(resultado)
