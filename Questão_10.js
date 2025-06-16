@@ -15,3 +15,7 @@ const citacaoPronta = citacaoBibliografica(nome, sobrenome)
 
 // Anônima:
 
+const citacaoBibliografica = (funcao, nome, sobrenome) => funcao(nome, sobrenome) 
+const citacaoPronta = citacaoBibliografica((nome, sobrenome) => `${sobrenome}, ${nome}.`, 'Victor', 'Santos')
+
+
