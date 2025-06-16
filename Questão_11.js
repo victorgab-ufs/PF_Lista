@@ -1,19 +1,23 @@
 //Q11. Número maior que a média entre 3
 
-//function QuantidadeNumerosMaioresMediaEntreEles(numero1, numero2, numero3){
-//const media = (numero1+numero2+numero3)/3
-//const numero1Maior = numero1>media
-//const numero2Maior = numero2>media
-//const numero3Maior = numero3>media
-//if (numero1Maior && numero2Maior) return 2
-//else
-//  if (numero1Maior && numero3Maior) return 2
-//  else
-//    if (numero2Maior && numero3Maior) return 2
-//    else
-//      if (numero1Maior===numero2Maior && numero2Maior===numero3Maior) return 0
-//      else return 1
-//}
+// Com function:
+
+function QuantidadeNumerosMaioresMediaEntreEles(numero1, numero2, numero3){
+const media = (numero1+numero2+numero3)/3
+const numero1Maior = numero1>media
+const numero2Maior = numero2>media
+const numero3Maior = numero3>media
+if (numero1Maior && numero2Maior) return 2
+else
+  if (numero1Maior && numero3Maior) return 2
+  else
+    if (numero2Maior && numero3Maior) return 2
+    else
+      if (numero1Maior===numero2Maior && numero2Maior===numero3Maior) return 0
+      else return 1
+}
+
+// Arrow:
 
 const quantidadeValoresMaioresMedia = (numero1, numero2, numero3) => {
 const media = (numero1 + numero2 + numero3) / 3
@@ -29,4 +33,6 @@ else
       if (numeroUmMaior && numeroTresMaior) return 2
       else return 1
 }
+
+// Anônima:
 
