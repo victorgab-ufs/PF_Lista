@@ -17,3 +17,7 @@ const resultado = quartaPotencia(quadrado)
 // Anônima:
 
 
+const quartaPotencia = (funcao, numero) => funcao(numero)
+const resultado = quartaPotencia((base) => base**4, 2)
+console.log(resultado)
+
