@@ -1,11 +1,15 @@
 //Q12. Raízes da equação do segundo grau
 
-//function raizesEquacaoSegundoGrau(a,b,c){
-//const delta = (b**2)-(4*a*c)
-//const raizMaior = ((-1)*b+(delta)**0.5)/(2*a)
-//const raizMenor = ((-1)*b-(delta)**0.5)/(2*a)
-//return `raízes: ${raizMaior} e ${raizMenor}`
-//}
+// Com function:
+
+function raizesEquacaoSegundoGrau(a,b,c){
+const delta = (b**2)-(4*a*c)
+const raizMaior = ((-1)*b+(delta)**0.5)/(2*a)
+const raizMenor = ((-1)*b-(delta)**0.5)/(2*a)
+return `raízes: ${raizMaior} e ${raizMenor}`
+}
+
+// Arrow:
 
 const raizesEquacaoSegundoGrau = (coeficienteA, coeficienteB, coeficienteC) => {
 const delta = (coeficienteB**2)-(4*coeficienteA*coeficienteC)
@@ -16,3 +20,4 @@ if (delta < 0) return 'Não há raízes reais'
 else return raizes
 }
 
+// Anônima:
