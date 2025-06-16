@@ -36,3 +36,19 @@ else
 
 // Anônima:
 
+const quantidadeValoresMaioresMedia = (funcao, numero1, numero2, numero3) => funcao(numero1, numero2, numero3)
+  
+const resposta = quantidadeValoresMaioresMedia((numero1, numero2, numero3) => {
+
+const media = (numero1 + numero2 + numero3) / 3
+
+if (numero1 === numero2 && numero2 == numero3) return 0
+else
+  if (numero1 > media && numero2 > media) return 2
+  else
+    if (numero2 > media && numero3 > media) return 2
+    else
+      if (numero1 > media && numero3 > media) return 2
+      else return 1
+}, 2, 3, 4)
+
