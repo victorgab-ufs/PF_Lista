@@ -21,3 +21,17 @@ else return raizes
 }
 
 // Anônima:
+
+const raizesEquacaoSegundoGrau = (funcao, coeficienteA, coeficienteB, coeficienteC) => funcao(coeficienteA, coeficienteB, coeficienteC)
+
+const resultados = raizesEquacaoSegundoGrau((coeficienteA, coeficienteB, coeficienteC) => {
+
+const delta = (coeficienteB**2)-(4*coeficienteA*coeficienteC)
+const maiorRaiz = (-coeficienteB+(delta**0.5))/(2*coeficienteA)
+const menorRaiz = (-coeficienteB-(delta**0.5))/(2*coeficienteA)
+const raizes = `Menor: ${menorRaiz} Maior: ${maiorRaiz}`
+
+if (delta < 0) return 'Não há raízes reais'
+else return raizes
+
+}, 2, -7, -3)
