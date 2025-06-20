@@ -16,8 +16,14 @@ const resultado = quartaPotencia(quadrado)
 
 // Anônima:
 
-
 const quartaPotencia = (funcao, numero) => funcao(numero)
 const resultado = quartaPotencia((base) => base**4, 2)
-console.log(resultado)
+
+// Currying: 
+
+const potencia = (expoente) => (base) => base**expoente
+const quadrado = potencia(2)
+const quartaPotencia = quadrado(3)**2
+
+
 
