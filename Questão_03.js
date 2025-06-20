@@ -33,7 +33,18 @@ const comparacao3 = lado2+lado3>lado1
 const conclusao = existeTriangulo((lado1, lado2, lado3) => (comparacao1 && comparacao2 && comparacao3), lado1, lado2, lado3)
 
 const resposta = (conclusao===true) ? 'É Triângulo' : 'Não é Triângulo'
-console.log(resposta)
+
+// Currying:
+
+const existenciaTriangulo = (lado1) => (lado2) => (lado3) => {
+
+if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2) return true
+else return false
+
+}
+
+const resposta = existenciaTriangulo(2)(1)(2)
+
 
 
 
