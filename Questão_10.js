@@ -18,4 +18,9 @@ const citacaoPronta = citacaoBibliografica(nome, sobrenome)
 const citacaoBibliografica = (funcao, nome, sobrenome) => funcao(nome, sobrenome) 
 const citacaoPronta = citacaoBibliografica((nome, sobrenome) => `${sobrenome}, ${nome}.`, 'Victor', 'Santos')
 
+// Currying:
+
+const citacaoBibliográfica = (nome) => (sobrenome) => `${sobrenome}, ${nome}.`
+const nomeCompletoCitado = citacaoBibliográfica('Victor')('Santos')
+
 
