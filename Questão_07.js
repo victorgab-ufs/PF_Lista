@@ -41,4 +41,19 @@ else
 
 }, 90, 195, 167)
 
+// Currying:
+
+const menorValorEntreTres = (valor1) => (valor2) => (valor3) => {
+
+if (valor1 === valor2 && valor2 === valor3) return valor1
+else
+  if (valor1 < valor2 && valor1 < valor3) return valor1
+  else
+    if (valor2 < valor3 && valor2 < valor1) return valor2
+    else return valor3
+
+}
+
+const resultado = menorValorEntreTres(10)(20)(4)
+
 
