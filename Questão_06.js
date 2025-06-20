@@ -32,7 +32,20 @@ if (n1===n2 && n2==n3) return 3
 
 const resposta = quantidadeNumerosIguais((n1, n2, n3) => conclusao(2, 1, 1))
 
-console.log(resposta)
+// Currying: 
+
+const quantidadeNumerosIguais = (numero1) => (numero2) => (numero3) => {
+
+if (numero1 === numero2 && numero2 === numero3) return 3
+else
+  if (numero1 !== numero2 && numero1 !== numero3 && numero2 !== numero3) return 0
+  else return 2
+
+}
+
+const resultado = `${quantidadeNumerosIguais(12)(1)(2)} números são iguais.`
+
+
 
 
 
