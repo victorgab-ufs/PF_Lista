@@ -35,3 +35,20 @@ if (delta < 0) return 'Não há raízes reais'
 else return raizes
 
 }, 2, -7, -3)
+
+// Currying:
+
+const raizes = (a) => (b) => (c) => {
+
+const delta = (b**2)-4*a*c
+const raizMaior = (-b+(delta**0.5))/(2*a)
+const raizMenor = (-b-(delta**0.5))/(2*a)
+
+
+if (delta < 0) return 'Sem raízes reais'
+else 
+  return `Maior: ${raizMaior} Menor: ${raizMenor}` 
+
+}
+
+const resultado = raizes(2)(-7)(3)
