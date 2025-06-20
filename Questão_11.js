@@ -52,3 +52,18 @@ else
       else return 1
 }, 2, 3, 4)
 
+// Currying:
+
+const numerosMaioresQueMedia = (numero1) => (numero2) => (numero3) => {
+
+const media = (numero1 + numero2 + numero3)/3
+
+if ((numero1 > media && numero2 > media) || (numero1 > media && numero3 > media) || (numero3 > media && numero2 > media)) return 2
+else
+  if ((numero1 > media) || (numero2 > media) || (numero3 > media)) return 1
+  else return 0
+
+}
+
+const resultado = numerosMaioresQueMedia(2)(2)(3)
+
