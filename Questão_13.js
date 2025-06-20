@@ -22,4 +22,10 @@ const velocidade = velocidadeXnoPontoT(posicao, tempo)
 const velocidadePontual = (funcao, posicao, tempo) => funcao(posicao, tempo)
 const valorDaVelocidade = velocidadePontual((posicao, tempo) => (posicao-500)/(tempo-5), 1000, 10)
 
+// Currying: 
+
+const velocidade = (posicao) => (tempo) => (posicao-500)/tempo
+const resultado = `${velocidade(1000)(10)} m/s`
+
+
 
