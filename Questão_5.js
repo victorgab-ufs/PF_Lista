@@ -22,7 +22,10 @@ const resultadoDistancia = distanciaEntreDoisPontos(deltaX, deltaY)
 // Anônima:
 
 const distanciaEntreDoisPontos = (funcao, x1, y1, x2, y2) => funcao(x1, y1, x2, y2)
-
 const resultadoDistancia = distanciaEntreDoisPontos((x1, y1, x2, y2) => (((x1-x2)**2) + ((y1-y2)**2))**0.5, 1, 2, 1, 2)
 
-console.log(resultadoDistancia)
+// Currying:
+
+const distanciaEntreDoisPontos = (x1, y1) => (x2, y2) => (((x1-x2)**2)+((y1-y2)**2))**0.5
+const resultado = distanciaEntreDoisPontos(1, 1)(1, 5)
+
