@@ -6,12 +6,18 @@ function areaRetangulo(aresta1, aresta2){
 return aresta1*aresta2
 }
 
-// Arrow
+// Arrow:
 
 const areaRetangulo = (lado1, lado2) => lado1*lado2
 
-// Anônima
+// Anônima:
 
 const areaRetangulo = (funcao, lado1, lado2) => funcao(lado1, lado2)
 const resultado = areaRetangulo((lado1, lado2) => lado1*lado2, 15, 20)
 console.log(resultado)
+
+// Currying:
+
+const areaRetangulo = (lado1) => (lado2) => lado1*lado2
+const resultadoArea = areaRetangulo(10)(10)
+console.log(resultadoArea)
