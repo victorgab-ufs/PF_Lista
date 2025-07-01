@@ -2,8 +2,7 @@
 
 // Com function:
 
-function areaCircunferencia(raio){
-const pi = 3.14
+function areaCircunferencia(raio, pi=3.14){
 return pi*raio*raio
 }
 
